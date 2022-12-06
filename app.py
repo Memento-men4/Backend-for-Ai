@@ -174,7 +174,7 @@ class QGModel(pl.LightningModule):
         return AdamW(self.parameters(), lr=LEARNING_RATE)
       
 
-checkpoint_path = '/Users/ihaneul/desktop/aiback/best-checkpoint-v6.ckpt'
+checkpoint_path = '/home/ubuntu/Backend-for-Ai/best-checkpoint-v6.ckpt'
 
 best_model = QGModel.load_from_checkpoint(checkpoint_path)
 best_model.freeze()
@@ -243,4 +243,4 @@ def index():
     return jsonify({"text1":generated1, "text2":generated2, "text3":generated3, "text4":generated4, "text5":generated5, "text6":generated6, "text7":generated7})
 
 if __name__ == "__name__":
-    app.run()
+    app.run(host='0.0.0.0', port=5000, debug=True)
