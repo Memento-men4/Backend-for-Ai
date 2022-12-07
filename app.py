@@ -232,13 +232,13 @@ def index():
     context6 = params['text6']
     context7 = params['text7']
 
-    generated1 = generate(best_model, input_answer, context1).split("  ")[1]
-    generated2 = generate(best_model, input_answer, context2).split("  ")[1]
-    generated3 = generate(best_model, input_answer, context3).split("  ")[1]
-    generated4 = generate(best_model, input_answer, context4).split("  ")[1]
-    generated5 = generate(best_model, input_answer, context5).split("  ")[1]
-    generated6 = generate(best_model, input_answer, context6).split("  ")[1]
-    generated7 = generate(best_model, input_answer, context7).split("  ")[1]
+    generated1 = generate(best_model, input_answer, context1).split("  ")[0]
+    generated2 = generate(best_model, input_answer, context2).split("  ")[0]
+    generated3 = generate(best_model, input_answer, context3).split("  ")[0]
+    generated4 = generate(best_model, input_answer, context4).split("  ")[0]
+    generated5 = generate(best_model, input_answer, context5).split("  ")[0]
+    generated6 = generate(best_model, input_answer, context6).split("  ")[0]
+    generated7 = generate(best_model, input_answer, context7).split("  ")[0]
 
     return jsonify({"text1":generated1, "text2":generated2, "text3":generated3, "text4":generated4, "text5":generated5, "text6":generated6, "text7":generated7})
 
